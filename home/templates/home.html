@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block style %}
+<line rel='stylesheet' href="{% static 'style.css' %}"
+
+{% endblock %}
+
+{% block content %}
+
+Hello from home
+
+<a href="https://cse.uap-bd.edu/">UAP CSE Page</a>
+<br>
+<a href="{% url 'login' %}">Our Login page</a>
+<br>
+<img id="uap_logo" src="{% static 'uap_logo.png' %}" alt="uap logo">
+
+<br>
+{% endblock %}
+
+
+{% block navbar %}
+
+<li><a href="{% url 'logout' %}">Logout</a></li>
+
+{% endblock %}
