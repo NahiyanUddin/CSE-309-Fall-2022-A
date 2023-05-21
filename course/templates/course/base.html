@@ -3,6 +3,8 @@
 <head>
     {% load static %}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>
         {% block title %}
         {% endblock %}
@@ -50,20 +52,10 @@ li a.active {
   <li><a href="#news">News</a></li>
   <li><a href="#contact">Contact</a></li>
   <li><a href="#about">About</a></li>
-
-  {% if user.is_authenticated %}
-    <li><a href="{% url 'logout' %}">Logout</a></li>
-  {% else %}
-    <li><a href="{% url 'signup' %}">Signup</a></li>
-    <li><a href="{% url 'login' %}">Login</a></li>
-  {% endif %}
-
+  <li><a href="{% url 'course4' code=100 %}">Course4</a></li>
   {% block navbar %}
   {% endblock %}
 </ul>
-
-{% block error %}
-{% endblock %}
 
 {% block content %}
 
